@@ -29,6 +29,7 @@ address {
 }
 
 button {
+    padding: 0;
     cursor: pointer;
 }
 
@@ -599,6 +600,9 @@ img {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
+
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .is-open {
@@ -620,6 +624,8 @@ img {
     border-radius: 4px;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
         0 2px 1px 0 rgba(0, 0, 0, 0.2);
+
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-close-btn {
     position: absolute;
@@ -637,14 +643,17 @@ img {
     transition-property: background-color, border;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-    &:hover {
-        background-color: #404bbf;
-        border: 1px solid rgba(0, 0, 0, 0);
-        .modal-close-icon {
-            fill: #ffffff;
-        }
-    }
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+    background-color: #404bbf;
+    border: none;
+}
+
+.modal-close-btn:hover .modal-close-icon,
+.modal-close-btn:focus .modal-close-icon {
+    fill: #ffffff;
 }
 
 .modal-close-icon {
@@ -661,10 +670,14 @@ img {
     line-height: 1.5;
     letter-spacing: 0.02em;
     text-align: center;
+    margin-bottom: 16px;
 }
 
 .modal-form {
-    margin-top: 16px;
+}
+
+.modal-form-wrapper {
+    margin-bottom: 8px;
 }
 
 .modal-label {
@@ -704,7 +717,6 @@ img {
 .modal-input-wrapper {
     position: relative;
     margin-top: 4px;
-    margin-bottom: 8px;
 }
 
 .modal-input-icon {
@@ -719,9 +731,12 @@ img {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.modal-comment-wrapper {
+    margin-bottom: 16px;
+}
+
 .modal-textarea {
     height: 120px;
-    margin-bottom: 16px;
     padding: 8px 16px;
     resize: none;
 
@@ -735,6 +750,10 @@ img {
         line-height: 1.17;
         letter-spacing: 0.04em;
     }
+}
+
+.modal-check-wrapper {
+    margin-bottom: 24px;
 }
 
 .modal-check {
@@ -775,6 +794,7 @@ img {
 .model-check-label {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .modal-label-link {
@@ -798,7 +818,6 @@ img {
     /* --- */
     display: block;
     margin: 0 auto;
-    margin-top: 24px;
     padding: 16px 32px;
 
     transition-property: background-color;
