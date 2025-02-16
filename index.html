@@ -724,12 +724,16 @@
                 <div class="footer-subs-wrapper">
                     <p class="footer-subtitle">Subscribe</p>
                     <form class="footer-subs-form">
-                        <input
-                            type="email"
-                            class="footer-subs-input"
-                            placeholder="E-mail"
-                        /><button type="submit" class="footer-subs-btn">
-                            <span class="footer-btn-text">Subscribe</span>
+                        <label class="footer-label" for="footer-email">
+                            <input
+                                type="email"
+                                class="footer-subs-input"
+                                name="footer-email"
+                                id="footer-email"
+                                placeholder="E-mail"
+                        /></label>
+                        <button type="submit" class="footer-subs-btn">
+                            Subscribe
                             <svg class="footer-btn-icon" width="24" height="24">
                                 <use
                                     href="./images/icons.svg#icon-telegram"
@@ -740,7 +744,7 @@
                 </div>
             </div>
         </footer>
-        <div class="backdrop is-open">
+        <div class="backdrop">
             <!-- is-open -->
             <div class="modal">
                 <button class="modal-close-btn" type="button">

@@ -518,14 +518,17 @@ img {
     margin-left: auto;
     margin-right: 3px;
 }
-.footer-subtitle {
-}
+
 .footer-subs-form {
     display: flex;
     gap: 24px;
 
     color: #ffffff;
 }
+
+.footer-label {
+}
+
 .footer-subs-input {
     width: 264px;
     height: 40px;
@@ -555,11 +558,17 @@ img {
 }
 
 .footer-subs-btn {
+    min-width: 165px;
     border: 0;
     border-radius: 4px;
     padding: 8px 24px;
     background-color: #4d5ae5;
     color: #ffffff;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    font-size: 16px;
+    text-align: center;
 
     display: flex;
     align-items: center;
@@ -572,14 +581,6 @@ img {
     &:hover {
         background-color: #404bbf;
     }
-}
-
-.footer-btn-text {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.04em;
-    text-align: center;
 }
 
 .footer-btn-icon {
@@ -766,11 +767,12 @@ img {
 }
 
 .modal-check-item {
+    display: inline-flex;
+
     width: 16px;
     height: 16px;
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 2px;
-    display: inline-flex;
     align-items: center;
     justify-content: center;
     background-color: transparent;
